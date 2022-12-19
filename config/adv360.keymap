@@ -33,7 +33,15 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
         };
+      td_media: tap_dance_media {
+          compatible = "zmk,behavior-tap-dance";
+          label = "TAP_DANCE_MEDIA";
+          #binding-cells = <0>;
+          tapping-term-ms = <TAPPING_TERM>;
+          bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREVIOUS>;
+          };
     };
+    // TODO: https://github.com/rastasheep/zmk-config/blob/master/config/lily58.keymap td media keys
 
   keymap {
     compatible = "zmk,keymap";
