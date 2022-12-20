@@ -28,7 +28,7 @@
           compatible = "zmk,behavior-hold-tap";
           label = "AUTO_SHIFT";
           #binding-cells = <2>;
-          tapping_term_ms = <135>;
+          tapping_term_ms = <60>;
           quick_tap_ms = <0>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
@@ -42,6 +42,7 @@
           };
     };
     // TODO: https://github.com/rastasheep/zmk-config/blob/master/config/lily58.keymap td media keys
+    // TODO: use &lt and &tog for left index homerow and circled 2 key
 
   keymap {
     compatible = "zmk,keymap";
@@ -50,8 +51,8 @@
       bindings = <
         AS(GRAVE) AS(N1)    AS(N2)   AS(N3)   AS(N4)     AS(N5) &tog 1                                                                       &mo 3 AS(N6) AS(N7) AS(N8)    AS(N9)   AS(N0)   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp F20                                                                        &kp F21 &kp Y  &kp U  &kp I     &kp O    &kp P    AS(BSLH)
-        &mt LEFT_CONTROL ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp F22           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &kp F23 &kp H  &kp J  &kp K     &kp L    AS(SEMI) AS(SQT)
-        &mt LEFT_SHIFT KP_LEFT_PARENTHESIS &kp Z     &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RIGHT_SHIFT KP_RIGHT_PARENTHESIS
+        &mt LEFT_CONTROL ESC   &kp A     &kp S    &kp D    &lt F      &kp G  &kp F22           &kp LCTRL &td_media             &kp LGUI  &kp RCTRL           &kp F23 &kp H  &kp J  &kp K     &kp L  &kp SEMI AS(SQT)
+        &kp LEFT_SHIFT  &kp Z     &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RIGHT_SHIFT
         &mo 2     &kp LEFT &kp RIGHT AS(MINUS) AS(EQUAL)                &mt LEFT_SHIFT SPACE &kp LEFT_COMMAND   &kp END              &kp PG_DN &mt LEFT_ALT ENTER &mt LEFT_CONTROL BACKSPACE              AS(LEFT_BRACKET) AS(RIGHT_BRACKET)  &kp DOWN &kp UP &mo 2
       >;
     };
