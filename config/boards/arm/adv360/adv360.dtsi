@@ -47,15 +47,6 @@
 			label = "EXT_POWER";
 			control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
 		};
-	backlight: pwmleds {
-    compatible = "pwm-leds";
-    label = "Backlight LEDs";
-    pwm_led_0 {
-        pwms = <&pwm0 17>;
-        label = "Backlight LED 0";
-    };
-
-};
 	leds {
 		compatible = "gpio-leds";
 		blue_led: led_0 {
