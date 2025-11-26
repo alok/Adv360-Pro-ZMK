@@ -78,7 +78,7 @@
           &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp F20                                                                        &kp F21 &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
           &hm LCTRL ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp F22           &kp LCTRL &td_media             &kp LEFT_COMMAND  &kp RIGHT_COMMAND           &kp F23 &kp H  &kp J  &kp K     &kp L  &kp SEMI &kp SQT
           &kp LEFT_SHIFT  &kp Z     &kp X    &kp C    &kp V      &kp B              &kp F18  &kp F16            &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RIGHT_SHIFT
-          &mo 2     &kp LEFT &kp RIGHT &kp MINUS &kp EQUAL                &hm LSHFT SPACE &kp LEFT_COMMAND   &kp F19              &kp F17 &hm LALT ENTER &hm LCTRL BACKSPACE              &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp DOWN &kp UP &mo 2
+          &mo 2     &kp LEFT &kp RIGHT &kp MINUS &kp EQUAL                &hm LSHFT SPACE &hm LGUI F17   &kp F19              &kp PG_DN &hm LALT ENTER &hm LCTRL BACKSPACE              &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp DOWN &kp UP &mo 2
       >;
     };
     keypad {

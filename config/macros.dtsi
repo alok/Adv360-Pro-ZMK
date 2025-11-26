@@ -222,3 +222,11 @@
     bindings = <&mkp MB1 &mkp MB1>;
     display-name = "Double Click";
   };
+
+  macro_raycast: macro_raycast {
+    compatible = "zmk,behavior-macro";
+    label = "RAYCAST";
+    #binding-cells = <0>;
+    bindings = <&kp LS(LC(LG(SPACE)))>;
+    display-name = "Raycast (Hyper+Space)";
+  };
