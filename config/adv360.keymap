@@ -11,6 +11,16 @@
 // Friendlier volume definitions, tap volume down, hold mute
 #define VOLUME_DOWN K_MUTE C_VOLUME_DOWN
 #define VOLUME_UP C_VOLUME_UP
+// Dual-role helpers to mimic broken Karabiner rules
+#define HT_OPT_F16 &hm LALT F16   // hold Option, tap F16 (Page Up)
+#define HT_F17_OPT &hm LALT F17   // hold Option, tap F17 (Page Down)
+#define HT_OPT_F18 &hm LALT F18   // hold Option, tap F18 (Home)
+#define HT_F19_OPT &hm LALT F19   // hold Option, tap F19 (End)
+#define HT_OPT_SQT &hm LALT SQT   // hold Option, tap '
+#define HT_OPT_ENT &hm LALT ENTER // hold Option, tap Enter
+#define HT_CTL_BSPC &hm LCTRL BACKSPACE // hold Control, tap Backspace
+#define HT_SFT_SPC &hm LSHFT SPACE      // hold Shift, tap Space
+#define HT_CTL_ESC &hm LCTRL ESC        // hold Control, tap Escape
 
 / {
     behaviors {
@@ -70,9 +80,9 @@
       bindings = <
           &kp GRAVE &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
           &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp F20                                                                        &kp F21 &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-          &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp F22           &kp LCTRL &td_media             &kp LEFT_COMMAND  &kp RIGHT_COMMAND           &kp F23 &kp H  &kp J  &kp K     &kp L  &kp SEMI &kp SQT
-          &kp LEFT_SHIFT  &kp Z     &kp X    &kp C    &kp V      &kp B              &kp HOME  &kp PG_UP            &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RIGHT_SHIFT
-          &mo 2     &kp LEFT &kp RIGHT &kp MINUS &kp EQUAL                &kp SPACE &kp LEFT_COMMAND   &kp END              &kp PG_DN &kp ENTER &kp BACKSPACE              &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp DOWN &kp UP &mo 2
+          &hm LCTRL ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp F22           &kp LCTRL &td_media             &kp LEFT_COMMAND  &kp RIGHT_COMMAND           &kp F23 &kp H  &kp J  &kp K     &kp L  &kp SEMI &kp SQT
+          &kp LEFT_SHIFT  &kp Z     &kp X    &kp C    &kp V      &kp B              &kp F18  &kp F16            &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RIGHT_SHIFT
+          &mo 2     &kp LEFT &kp RIGHT &kp MINUS &kp EQUAL                &hm LSHFT SPACE &kp LEFT_COMMAND   &kp F19              &kp F17 &hm LALT ENTER &hm LCTRL BACKSPACE              &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp DOWN &kp UP &mo 2
       >;
     };
     keypad {
@@ -80,8 +90,8 @@
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp F18 &kp F16                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BACKSPACE &kp DEL   &kp F19  &kp F17 &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
     fn {
