@@ -39,9 +39,10 @@
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
-          flavor = "tap-preferred";
+          tapping-term-ms = <175>;           // Shorter - favors hold behavior
+          quick-tap-ms = <0>;                // Disabled - no key repeat needed
+          require-prior-idle-ms = <100>;     // 10500/100 WPM - prevents accidental holds
+          flavor = "hold-preferred";         // Modifier activates immediately on chord
           bindings = <&kp>, <&kp>;
       };
       as: auto_shift {
