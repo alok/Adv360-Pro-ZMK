@@ -34,7 +34,7 @@
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
           tapping-term-ms = <175>;           // Shorter - favors hold behavior
-          quick-tap-ms = <175>;              // Enabled - tap then hold = repeat
+          quick-tap-ms = <220>;              // Tap then hold = repeat (220ms window)
           require-prior-idle-ms = <100>;     // 10500/100 WPM - prevents accidental holds
           flavor = "hold-preferred";         // Modifier activates immediately on chord
           bindings = <&kp>, <&kp>;
